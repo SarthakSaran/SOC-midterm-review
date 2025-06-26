@@ -7,7 +7,7 @@ Learning Python has been a very useful experience for me. As a beginner, I start
 
 I began by installing Python 3 in Google Colab and done all my coding on colab only.
 
-### Python Syntax and Philosophy
+### About Python
 
 Python is designed to be easy to read and write. It does not use symbols like curly braces or semicolons. Instead, it uses indentation to structure the code, which makes the code cleaner and more readable.
 
@@ -180,3 +180,281 @@ ML is used in many places, like:
 * Self-driving cars
 * Chatbots and language tools
 
+## Basics of Neural Networks
+
+Neural networks are an important part of artificial intelligence (AI) and machine learning. They are made to work like the human brain, so computers can learn from data and make smart decisions. I watched some YouTube videos and read a few articles to understand how they work, summary of same is as follows:
+
+### What is a Neural Network?
+
+A neural network is a computer system that tries to copy how our brain works. It learns patterns from data, so it can make predictions or solve problems. For example, it can be used for things like recognizing faces in photos, translating languages, or playing games.
+
+### Main Parts of a Neural Network
+
+Neural networks are made of small units called *neurons*. These neurons are connected together in layers:
+
+* **Input Layer** – This is where the data comes in. For example, the pixel values of a picture.
+* **Hidden Layer(s)** – These layers do the calculations and help find patterns in the data.
+* **Output Layer** – This layer gives the final result, like a prediction or answer.
+
+Other important parts are:
+
+* **Weights and Biases** – These are numbers that help decide how important each input is.
+* **Activation Functions** – These are used to help the network understand complex things. Some examples are:
+
+  * **Sigmoid** – Gives results between 0 and 1.
+  * **ReLU** – Makes all negative numbers zero, keeps positive numbers the same.
+  * **Tanh** – Gives results between -1 and 1.
+
+### How Neural Networks Work
+
+Here is how a neural network usually works:
+
+1. **Feedforward** – Data goes from the input layer, through the hidden layers, to the output layer.
+2. **Prediction** – The output layer gives a prediction or result.
+3. **Training with Backpropagation** – If the prediction is wrong, the network fixes its mistakes by changing the weights and biases. This happens many times so it can learn better.
+
+### Types of Neural Networks
+
+* **Single Layer Perceptron** – This is the simplest kind. It only has one layer between input and output. Good for simple problems.
+* **Multi-Layer Perceptron (MLP)** – Has more than one hidden layer. Can solve harder problems.
+* **Deep Neural Networks** – These have many hidden layers. They are used for very complex tasks, like speech or image recognition.
+
+### Why Neural Networks Are Important
+
+Neural networks are powerful because they can learn from data without needing humans to tell them every rule. They are used in many areas like:
+
+* Image and voice recognition
+* Chatbots and translation
+* Self-driving cars
+* Games like chess or Go
+* Medical tools that help doctors
+
+They are very useful because they can understand things directly from raw data, like pictures or sound, without too much help from humans.
+
+Sure! Here’s a more beginner-friendly and simple version of your report on Convolutional Neural Networks (CNNs), written in plain English like a fresher might explain:
+
+## Basics of Convolutional Neural Networks (CNNs)
+
+Convolutional Neural Networks, or CNNs, are a special type of deep learning model mostly used for images. They are very good at understanding pictures, and are used in things like recognizing faces, detecting objects, and classifying images (like telling if a photo has a cat or a dog).
+
+### What Makes CNNs Different?
+
+Normal neural networks look at data as a flat list of numbers. But CNNs keep the shape of the image (like width and height) while working on it. This helps CNNs find patterns in images, like edges, shapes, or textures, directly from the raw image without needing a human to point them out.
+
+### Main Parts of a CNN
+
+#### 1. **Convolutional Layer**
+
+* This is the main part of a CNN.
+* It uses small filters (like a window) that move across the image.
+* Each filter looks for patterns in the image and creates a new image called a feature map.
+* You can control how it moves (stride), and how much of the image it sees (filter size and padding).
+
+#### 2. **Activation Function**
+
+* After filtering, we use an activation function to add non-linearity (so the model can learn complex things).
+* The most common one is ReLU, which replaces negative numbers with 0.
+
+#### 3. **Pooling Layer**
+
+* This layer makes the data smaller so the model is faster and more stable.
+* Max pooling is common — it keeps the biggest number from each small area.
+* It helps to focus on the most important parts of the image.
+
+#### 4. **Fully Connected Layer (Dense Layer)**
+
+* After all the filters and pooling, the data is turned into a list.
+* Then it goes through one or more dense layers to make the final prediction (like telling if the image is of a dog or a cat).
+
+### How CNNs Work (Step-by-Step)
+
+1. **Input:** The image goes into the network.
+2. **Feature Extraction:** CNN looks at small parts of the image to find things like lines, shapes, or patterns.
+3. **Classification:** In the end, the model uses what it found to decide what’s in the image.
+
+### Why CNNs Use Convolutions
+
+* Convolutions look at small areas of the image, so the model can understand local features.
+* The same filters are used again and again across the image, which saves memory and time.
+* Lower layers find simple patterns like edges, and higher layers build on that to find more complex shapes.
+
+### A Simple CNN Architecture
+
+A basic CNN has:
+
+* Input layer
+* One or more groups of:
+
+  * Convolution → Activation → Pooling
+* Then:
+
+  * Flatten → Dense Layer → Output
+
+Famous models like LeNet, AlexNet, and ResNet are built using this structure with more improvements.
+
+### Where CNNs Are Used
+
+CNNs are used in many fields, such as:
+
+* Image classification (cat or dog)
+* Object detection (where is the object in the image)
+* Face recognition
+* Medical imaging (like finding problems in X-rays)
+* Self-driving cars (seeing and understanding the road)
+* Changing photo styles (like turning a photo into art)
+
+## Deep Learning?
+
+Deep learning is a type of machine learning that uses **neural networks with many layers** (this is why it’s called "deep"). Instead of writing rules, deep learning lets the computer figure things out on its own. These models can learn patterns from big data, like photos, sounds, or text. Deep learning is used in things like face recognition, voice assistants, translations, and more.
+
+### How Is Deep Learning Different from Regular Machine Learning?
+
+* In **normal ML**, people have to tell the computer what features (data points) to focus on.
+* In **deep learning**, the computer learns these features by itself, without much human help. This makes it better for complicated problems like images or speech.
+
+### Main Concepts I Learned
+
+#### 1. **Forward and Backward Pass**
+
+* **Forward pass** – data goes through the layers to make a prediction.
+* **Loss function** – checks how wrong the prediction is.
+* **Backpropagation** – the model learns from the mistake by adjusting weights to improve next time.
+
+#### 2. **Training Terms**
+
+* **Epoch** – one full round over all the training data.
+* **Batch** – a small group of data used in one step.
+* **Iteration** – one update of the model after a batch.
+
+#### 3. **Overfitting and Underfitting**
+
+* **Overfitting** – model learns training data too well and does badly on new data.
+* **Underfitting** – model doesn’t learn enough, so it does badly on both old and new data.
+
+### Why Deep Learning Works So Well
+
+* It can **learn from raw data** without needing humans to pick the features.
+* It works well with **big data** and can learn very complex things.
+* Each layer **builds on top of the last one**, so it can learn simple to advanced patterns (like lines → shapes → faces).
+
+### Where Deep Learning Is Used
+
+Deep learning is behind many cool technologies:
+
+* Image and voice recognition
+* Chatbots and language translation
+* Self-driving cars
+* Medical diagnosis
+* Recommendation systems (like Spotify or YouTube)
+* Detecting fraud
+* Game playing (like AlphaGo)
+
+### Challenges in Deep Learning
+
+* It needs **a lot of data** to work well.
+* It needs **strong computers**, like GPUs, to train faster.
+* Sometimes the models are like **black boxes** – it’s hard to understand how they make decisions.
+
+Sure! Here's a simplified and more human version of your Scikit-learn report — written in plain, beginner-style English, like how a fresher or someone new to machine learning might explain what they’ve learned:
+
+
+## Scikit-learn?
+
+Scikit-learn (or `sklearn`) is a free and open-source Python library. It’s built on other Python tools like NumPy, SciPy, and Matplotlib. It’s made for both beginners and experienced users to easily do tasks in machine learning like classification, regression, and clustering.
+
+### Why It’s Useful (Main Features)
+
+* **Same Method for All Models**
+  Most models use `.fit()`, `.predict()`, and `.score()` — once you learn it for one model, you can apply it to others.
+
+* **Good Documentation**
+  The official website explains things clearly with examples, so it’s easy to follow.
+
+* **Many Algorithms**
+  You can use it for classification, regression, clustering, and even dimensionality reduction (like PCA).
+
+* **Preprocessing Tools**
+  It helps clean and prepare your data — scale numbers, handle missing values, or convert categories to numbers.
+
+* **Testing and Evaluation**
+  Scikit-learn has tools for splitting data, doing cross-validation, and checking model performance.
+
+* **Workflow with Pipelines**
+  You can connect multiple steps into one flow — clean data, train model, and make predictions — all in one pipeline.
+
+
+### Preprocessing Data
+
+Before training a model, your data must be clean. Scikit-learn gives tools for that:
+
+* **Scaling Data**
+
+  * `StandardScaler`: standardizes data (mean = 0, std = 1)
+  * `MinMaxScaler`: scales data between 0 and 1
+  * `RobustScaler`: works well if you have outliers
+
+* **Handling Categorical Features**
+
+  * `OneHotEncoder`: turns categories into 0s and 1s
+  * `OrdinalEncoder`: turns categories into numbers like 0, 1, 2…
+
+* **Filling Missing Values**
+
+  * `SimpleImputer`: fills missing data with mean, median, or a constant
+
+* **More Features**
+
+  * Create new features using `PolynomialFeatures`
+  * Convert numbers into groups (bins) with `KBinsDiscretizer`
+
+---
+
+### Using Pipelines
+
+Pipelines let you combine all the steps — preprocessing and modeling — into one object. This makes your code clean and ensures the same steps happen to both training and test data.
+
+### Algorithms and Modules I Used
+
+Scikit-learn supports many types of ML models and tools:
+
+* **Supervised Learning**
+
+  * Classification: logistic regression, SVM, decision trees, random forest
+  * Regression: linear regression, ridge, lasso
+
+* **Unsupervised Learning**
+
+  * Clustering: KMeans, DBSCAN
+  * Dimensionality reduction: PCA
+
+* **Model Tuning**
+
+  * `GridSearchCV` and `RandomizedSearchCV` help you find the best settings
+
+* **Metrics**
+
+  * Accuracy, precision, recall, F1-score, ROC-AUC, etc.
+
+
+### Step-by-Step Workflow I Follow
+
+1. **Load Data**
+   Usually with pandas.
+
+2. **Clean and Prepare**
+   Scale, encode, or fill missing values using scikit-learn tools.
+
+3. **Build Pipeline**
+   Chain everything together.
+
+4. **Train the Model**
+   Use `.fit()` on training data.
+
+5. **Test the Model**
+   Use `.score()` or other metrics to see how good it is.
+
+6. **Tune the Model**
+   Try different settings with grid search.
+
+7. **Make Predictions**
+   Use `.predict()` to get results on new data.
