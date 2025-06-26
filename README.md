@@ -407,8 +407,6 @@ Before training a model, your data must be clean. Scikit-learn gives tools for t
   * Create new features using `PolynomialFeatures`
   * Convert numbers into groups (bins) with `KBinsDiscretizer`
 
----
-
 ### Using Pipelines
 
 Pipelines let you combine all the steps — preprocessing and modeling — into one object. This makes your code clean and ensures the same steps happen to both training and test data.
@@ -458,3 +456,35 @@ Scikit-learn supports many types of ML models and tools:
 
 7. **Make Predictions**
    Use `.predict()` to get results on new data.
+
+
+## Feature Engineering
+
+Feature engineering is an important part of machine learning. It means changing and creating data (called **features**) so that the model can learn better and make better predictions.
+
+### What is a Feature?
+
+A feature is just a piece of information in your data — like a person’s age, income, or product price. Feature engineering is about using or making the right features for your model.
+
+### Why Feature Engineering Is Important
+
+* **Better accuracy:** Good features help models work better.
+* **Less overfitting:** Using only useful features makes models simpler and safer.
+* **Fixes messy data:** Helps clean missing values, outliers, or text data.
+
+### Main Types of Feature Engineering
+
+1. **Improve Features:** Clean or fix current data (like filling missing values or scaling numbers).
+2. **Create New Features:** Combine or change features (e.g., turning "date" into "day of the week").
+3. **Select Important Features:** Keep only the most useful ones.
+4. **Extract Info:** Use tools like PCA to reduce feature numbers.
+5. **Let Models Learn Features:** Deep learning can find features by itself (like in images or audio).
+
+### Common Techniques
+
+* **Encoding:** Turn categories into numbers (like "Male" → 0, "Female" → 1).
+* **Scaling:** Make all numbers similar in size.
+* **Filling Missing Data:** Use mean, median, or a fixed value.
+* **Binning:** Group numbers (e.g., age 0–18 = “young”, 19–35 = “adult”).
+* **Combining Features:** Make a new one from two others.
+* **Use Domain Knowledge:** Think about the real-world meaning of the data.
